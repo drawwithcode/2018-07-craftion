@@ -18,5 +18,5 @@ function draw(){
   micLevel = mic.getLevel();
   ellipse(width/2, constrain(height-micLevel*height*5, 0, height), 10, 10);
 
-  image(need, width/2, constrain(height-micLevel*height*5, 0, height),need.width, need.height);
+  image(need, width/6, constrain(height-micLevel*height*5, 0, height),need.width, need.height);
 }
