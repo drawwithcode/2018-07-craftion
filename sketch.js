@@ -1,11 +1,22 @@
+
+var need
 function preload(){
   // put preload code here
+  need = loadImage('./assets/needle.png');
 }
 
-function setup() {
-  // put setup code here
-}
+var mic;
 
-function draw() {
-  // put drawing code here
+function setup(){
+  createCanvas(windowWidth,windowHeight);
+  mic = new p5.AudioIn()
+  mic.start();
+
+}
+function draw(){
+  background(0);
+  micLevel = mic.getLevel();
+  ellipse(width/2, constrain(height-micLevel*height*5, 0, height), 10, 10);
+
+  image(need, width/2, constrain(height-micLevel*height*5, 0, height),need.width, need.height);
 }
