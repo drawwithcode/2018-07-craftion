@@ -25,7 +25,7 @@ function draw() {
   image(need, 0, 0, windowWidth, windowHeight);
   image(act, width / 6 * 2, height / 4, act.width, act.height);
 
-  image(crowd, 0, constrain(height - micLevel * height * 3, 0, height), windowWidth, crowd.height * 1.2);
+  image(crowd, 0, constrain(height - micLevel * height * 2, 0, height), windowWidth, crowd.height * 1.2);
 
   var myText = 'Applause for amazing play of Hamlet'
   drawingContext.font =' 60px Lobster'
