@@ -1,12 +1,9 @@
 var need;
 var act;
-var act1;
-
 function preload() {
   // put preload code here
   need = loadImage('./assets/stage.jpg');
   act = loadImage('./assets/actor.png');
-  act1 = loadImage('./assets/actor2.png');
   crowd = loadImage('./assets/crowd.png');;
 }
 
@@ -23,12 +20,19 @@ function setup() {
 function draw() {
   background(0);
   micLevel = mic.getLevel();
-   this.x = width
-   this.y = height
-  image(need, 0,0, windowWidth, windowHeight);
-  image(act1,width/6*2, height/4, act1.width,act1.height);
-  image(act, width/6*2, height/4, act.width,act.height);
- image(crowd , 0, constrain(height-micLevel*height*3, 0, height), windowWidth, crowd.height*1.2);
+  this.x = width
+  this.y = height
+  image(need, 0, 0, windowWidth, windowHeight);
+  image(act, width / 6 * 2, height / 4, act.width, act.height);
+
+  image(crowd, 0, constrain(height - micLevel * height * 3, 0, height), windowWidth, crowd.height * 1.2);
+
+  var myText = 'Applause for amazing play of Hamlet'
+  drawingContext.font =' 60px Lobster'
+  drawingContext.textAlign = 'center';
+  fill('white');
+  text(myText, width/2, height/8);
+
 
 
   // if( micLevel > 0,1){
@@ -41,7 +45,7 @@ function draw() {
 
   // for (var i = 0; i < balls.length; i++) {
   //   balls[i].show();
-    // balls[i].update();
+  // balls[i].update();
   // }
 }
 
